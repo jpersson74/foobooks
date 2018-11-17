@@ -1,6 +1,6 @@
 # Practice work
-+ By: Susan Buck
-+ Production URL: <http://foobooks.dwa15.me>
++ By: Josh Persson
++ Production URL: <http://foobooks.shua-page.com>
 
 ## Outside resources
 + None yet
