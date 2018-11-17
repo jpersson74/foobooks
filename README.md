@@ -1,3 +1,10 @@
 # Practice work
-+ By: *Josh Persson*
-+ Production URL: <http://foobooks.shua-page.com>
++ By: Susan Buck
++ Production URL: <http://foobooks.dwa15.me>
+
+## Outside resources
++ None yet
+
+## Code style divergences
++ Some HTML code may extend beyond 80 characters
+
