@@ -8,6 +8,116 @@ use App\Book;
 
 class PracticeController extends Controller
 {
+    public function practice13()
+    {
+        $book = new Book();
+        $books = Book::where('author', '=', 'J.K. Rowling')->delete();
+
+        if (!$book) {
+            dump("Book not found, can't update.");
+        } else {
+
+
+            // # Save the changes
+            //  $book->save();
+
+            dump('Update complete; check the database to confirm the update worked.');
+        }
+
+    }
+
+
+    public function practice12()
+    {
+
+        $book = Book::where('author', '=', 'J.K. Rowling')
+            ->update([
+                'author' => 'JK Rowling',
+
+            ]);
+
+       if (!$book) {
+            dump("Book not found, can't update.");
+        } else {
+
+
+           // # Save the changes
+          //  $book->save();
+
+           dump('Update complete; check the database to confirm the update worked.');
+        }
+    }
+
+    public function practice11()
+    {
+        $book = new Book();
+        $books = Book::orderBy('published_year', 'desc')->get();
+
+
+        if ($books->isEmpty()) {
+            dump('No matches found');
+        } else {
+            foreach ($books as $book) {
+                dump($book->title);
+            }
+        }
+    }
+
+
+    public function practice10()
+    {
+        $book = new Book();
+        $books = Book::orderBy('title', 'asc')->get();
+
+
+        if ($books->isEmpty()) {
+            dump('No matches found');
+        } else {
+            foreach ($books as $book) {
+                dump($book->title);
+            }
+        }
+    }
+
+
+
+
+    public function practice9()
+    {
+        $book = new Book();
+        $books = Book::where('published_year', '>', 1950)->get();
+
+
+        if ($books->isEmpty()) {
+            dump('No matches found');
+        } else {
+            foreach ($books as $book) {
+                dump($book->title);
+            }
+        }
+    }
+
+
+
+
+
+    public function practice8()
+    {
+        $book = new Book();
+        $books = Book::whereIn('id',[5,6])->get();
+
+
+        if ($books->isEmpty()) {
+            dump('No matches found');
+        } else {
+            foreach ($books as $book) {
+                dump($book->title);
+            }
+        }
+    }
+
+
+
 
     /**
      * DELETE a single row
